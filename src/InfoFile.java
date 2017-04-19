@@ -29,14 +29,19 @@ public class InfoFile {
 	}
 
 	public boolean isDoc() {
-		String[] ext = { "pdf", "doc", "docx", "txt" };
+		/*String[] ext = { "pdf", "doc", "docx", "txt" };
 		for (int i = 0; i < ext.length; i++) {
 			if (file.getName().toLowerCase().endsWith(ext[i]))
 				return true;
+		}*/
+		if(!this.isImg()){
+			return true;
 		}
 		return false;
 	}
-
+	/**
+	 * ciao <b>bello</b>
+	 * */
 	public String getTechnicalInfo() {
 		String s = "";
 		s += "Può essere letto: " + file.canRead();
